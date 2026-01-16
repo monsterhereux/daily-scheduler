@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "@fullcalendar/core/main.css";
+@import "@fullcalendar/daygrid/main.css";
+@import './calendar.css';
+
+#calendar {
+    background: rgb(227, 125, 125);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.navbar {
+    background-color: #18273d;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logout {
+    background: #ef4444;
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.container {
+    padding: 30px;
+}
+
+.card {
+    background: rgb(255, 255, 255);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   FULLCALENDAR DARK THEME
+========================= */
+
+/* background utama kalender */
+.fc {
+    background-color: #fcfdfe; /* dark blue */
+    color: #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+/* header (bulan + tombol) */
+.fc .fc-toolbar-title {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.fc .fc-button {
+    background-color: #88374a !important;
+    border: none !important;
+    color: #f9fafb !important;
+}
+
+.fc .fc-button:hover {
+    background-color: #56232f !important;
+}
+
+/* hari */
+.fc .fc-col-header-cell {
+    background-color: #88374a;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+/* grid tanggal */
+.fc .fc-daygrid-day {
+    background-color: #bf5c7a;
+    border: 1px solid #ffffff;
+}
+
+/* tanggal hari ini */
+.fc .fc-day-today {
+    background-color: #88374a !important;
+}
+
+/* angka tanggal */
+.fc .fc-daygrid-day-number {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* event */
+.fc .fc-event {
+    background-color: #eb9fbb;
+    border: none;
+    color: #000307;
+    font-size: 0.75rem;
+    padding: 2px 4px;
+    border-radius: 0.25rem;
+}
+
+/* hover event */
+.fc .fc-event:hover {
+    background-color: #d81d5b;
+}
+
+/* hilangkan background putih */
+.fc-theme-standard td,
+.fc-theme-standard th {
+    border-color: #ffffff;
+}

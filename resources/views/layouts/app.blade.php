@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
+<body class="font-sans antialiased">
+   <div class="min-h-screen bg-gray-100 text-gray-900">
+
+        @include('layouts.navigation')
+
+        @isset($header)
+            <header class="bg-white shadow">
+                <div class="max-w-7xl mx-auto py-6 px-4">
+                    {{ $header }}
+                </div>
+            </header>
+        @endisset
+
+        <main>
+            {{ $slot }}
+        </main>
+    </div>
+</body>
+</html>
